@@ -35,6 +35,68 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 
+## STAR Candidates (Complete Manually)
+
+### 1. Collision Detection engine (real-time systems)
+**Source:** CV / LinkedIn - Principal .NET Developer & Software Architect, GreenRoad (2024-2026)
+**What happened:** Led the design and deployment of a real-time Collision Detection engine processing high-concurrency events with a zero-crash record.
+**Why it matters:** "Tell me about a complex system you built", technical depth, real-time/scale questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 2. ODI asynchronous resource leak fix (deep debugging)
+**Source:** CV / LinkedIn - GreenRoad (2024-2026)
+**What happened:** Resolved low-level asynchronous resource leaks in On-Demand Intelligence (ODI) services, ensuring zero downtime under extreme loads.
+**Why it matters:** "Hardest bug you've ever solved", production-pressure and reliability questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 3. AI-facilitated migration infrastructure (AI-driven development)
+**Source:** CV - GreenRoad + Amit Kuzi Consulting
+**What happened:** Built AI-facilitated infrastructure (structured LLM workflows with Claude Code) that accelerated migration of legacy .NET Framework / CoreWCF systems to .NET 8/10 containerized APIs on Docker/Kubernetes.
+**Why it matters:** "How do you use AI tooling", innovation and productivity questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 4. CloudSfer On-Prem agent (initiative / innovation)
+**Source:** CV / LinkedIn - Tzunami (2017-2020)
+**What happened:** Developed an industry game-changer agent letting cloud-based CloudSfer migrate local On-Prem data to cloud storage without firewall exceptions or connection hindrances.
+**Why it matters:** "Most innovative thing you've built", initiative and product-thinking questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 5. Offshore team leadership in Kathmandu (leading distributed teams)
+**Source:** CV / LinkedIn - Tzunami (2017-2020)
+**What happened:** Managed and mentored a dev group of ~30: an offshore team of ~25 in Kathmandu, Nepal, plus a local hands-on team, support, and IT operations.
+**Why it matters:** "Leading distributed/multicultural teams", management style and mentoring questions.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### 6. Serial legacy-migration leadership (Amimon, Cynet, GreenRoad)
+**Source:** CV + user clarification - legacy code migrations led at three companies
+**What happened:** Repeatedly led legacy modernization efforts: Amimon internal tooling, Cynet .NET Framework -> .NET Core/.NET 6, GreenRoad CoreWCF/ODI -> .NET 8/10 containerized.
+**Why it matters:** "Driving technical change", modernization strategy, convincing stakeholders to invest in tech debt.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
 ## Common Tough Questions
 
 ### "Why did you leave [previous company]?"

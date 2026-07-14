@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Amit Kuzi
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Amit Kuzi, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,68 +10,69 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
+Full structured profile: `.claude/skills/job-application-assistant/01-candidate-profile.md` (authoritative for dates/titles). Behavioral profile: `02-behavioral-profile.md`.
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Amit Kuzi
+- **Location:** Holon, Israel (Tel Aviv metro; up to ~40 min transit commute - Ra'anana/Herzliya/Kfar Saba down to Rehovot OK, Netanya too far)
+- **Languages:** Hebrew (native), English (fluent)
+- **Status:** Concluding role at GreenRoad Technologies (2026); seeking next position
+- **Contact:** amitkuzi@gmail.com | +972 (0)54 4543836 | linkedin.com/in/amitkuzi | github.com/amitkuzi | amitkuzi.co.il
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.Sc. Chemical Engineering** (1993-1998) - Technion, Israel Institute of Technology, Haifa
+  - Topics: Process Engineering, Computer Applications
 
-### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+### Professional Experience (highlights; full history in 01-candidate-profile.md)
+- **Principal .NET Developer & Software Architect** (2024-2026) - **GreenRoad Technologies** (Holon)
+  - .NET 8/10 microservices; AI-facilitated legacy migration (CoreWCF to REST on Docker/K8s)
+  - Collision Detection real-time engine, zero-crash; ODI async-leak fixes, zero downtime
+- **Developer, Architect, Manager, Consultant** (2020-2024) - **Amit Kuzi Consulting** (Tel Aviv District)
+- **Senior Software Engineer** (2021-2022) - **Microsoft** (Herzliya) - Power Query Dataflow, Power BI/Power Apps
+- **Hands-on Team Leader** (2022-2023) - **Cynet** - legacy .NET Framework to .NET 6 migration
+- **VP R&D / Hands-On R&D Manager** (2017-2020) - **Tzunami** (Herzliya) - ~30-person group incl. 25 offshore (Nepal)
+- **Tools Team Leader** (2015-2017) - **Amimon** (Ra'anana)
+- Earlier roles 1997-2015: CodeValue, Cellebrite, Netformx, E4D/log-on, Check Point, and more
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** C#, .NET (Framework through .NET 10), backend, microservices, RESTful APIs, software architecture, distributed systems, legacy modernization & migration, Docker, Kubernetes
+- **Secondary:** ETL/data pipelines, cloud storage integrations (GDrive/OneDrive/Box), WPF/desktop (legacy depth), Angular (course-level)
+- **Domain:** AI-assisted engineering (Claude Code, MCP, prompt engineering, agentic workflows), telematics/real-time systems, data migration products, cybersecurity (Cynet)
+- **Software:** Visual Studio, Git, Docker/K8s toolchain, Power BI/Power Query
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- C# 7 First Look; C#: Design Patterns; Learning ASP.NET Core MVC; Angular Essential Training
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- None
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- None recorded
 
-### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+### Behavioral Profile (full detail in 02-behavioral-profile.md)
+- **Ownership-driven** - takes ownership, sees things through; hands-on when needed, hands-off when things work
+- **Systems thinker** - root causes, whole-picture design that survives real-world pressure
+- **Mentor-leader** - mentors without ego; high bar for professionalism
+- **Anti-hype pragmatist** - simple solutions that last; skeptical of hype unless it solves a real problem
+- **Strengths:** direct honest communication, legacy-modernization leadership, global team building
+- **Growth areas:** low tolerance for prolonged ambiguity and repeated mistakes (frame as structure-creator)
+- **Thrives in:** trust, clarity, psychological safety; clear goals; learning-not-blame culture
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Legacy modernization at scale and AI-driven development (Claude Code workflows)
+- Building/mentoring confident teams; stable systems under real load; meaningful problems with real impact
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- **Target roles:** Principal Developer / Tech Lead, Software Architect, Engineering Manager (hands-on), Technology Consultant
+- **Big tech / large enterprise (Israel R&D centers):** Google, Microsoft, NVIDIA, Amazon/AWS, Apple, Meta, Intel, and similar
+- **Israeli product companies & scale-ups:** telematics, SaaS, cybersecurity, data platforms
+- **Consulting firms:** CodeValue-style architecture/consulting practices
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Relocation (Israel-based only; hybrid/remote-friendly preferred)
+- Pure people-management with zero hands-on technical component
+- Pure maintenance roles with no development
+- "Move fast and break things" culture as a virtue; vague goals / constantly shifting expectations
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

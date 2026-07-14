@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** C# / .NET (Framework through .NET 10), backend development, microservices, RESTful APIs, software architecture, distributed systems, scalability / high-concurrency, legacy modernization & migration, Docker, Kubernetes, AI-assisted development (Claude Code, MCP, agentic workflows), technical leadership & mentoring, offshore/global team management, full-cycle ownership
+**Moderate match areas:** data pipelines (ETL), cloud storage integrations (GDrive/OneDrive/Box), Power BI / Power Query internals, WPF/desktop (deep but legacy), agile team management, consulting & pre-sales, Angular (course-level)
+**Weak match areas:** production depth outside the .NET ecosystem (Java, Go, Python services), ML/data-science research, frontend-heavy roles, embedded/firmware, DevOps-only roles (uses K8s, not a platform engineer)
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Principal/senior .NET backend engineering, software architecture, hands-on team/tech leadership (up to ~30 people incl. offshore), legacy-modernization programs (Amimon, Cynet, GreenRoad), technology consulting (own practice 2020-2024, CodeValue), telematics/real-time systems, data migration products, big-tech environment (Microsoft, Power BI/Power Query)
+**Moderate:** VP R&D of a small company (Tzunami), cybersecurity domain (Cynet, Check Point), medical/homeland-security domains (consulting years), cloud SaaS product companies
+**Entry-level:** ML/AI research roles, product management, pure DevOps/SRE, frontend leadership
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -62,20 +62,22 @@ Does this role advance career goals and contain tasks that energize?
 | 40-59 | Decent job but doesn't build toward career goals |
 | 0-39 | Dead end or backwards step |
 
-**Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+**Career goals (target role types, in priority order):**
+- Principal Developer / Tech Lead - hands-on technical leadership of a team or domain
+- Software Architect - system design, modernization programs, distributed systems
+- Engineering Manager (hands-on) - people + technology leadership, not pure people management
+- Technology Consultant / consulting positions - leveraging the 2020-2024 independent practice and CodeValue background
+- Cross-cutting differentiator: AI-driven development and legacy-modernization leadership (Claude Code, MCP, agentic workflows)
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: legacy modernization at scale, architecture design, mentoring engineers, adopting AI tooling into engineering workflows, hunting hard production bugs (async leaks, concurrency), building real-time/high-load systems
+- Tasks that drain: pure maintenance with no development, pure people management with zero hands-on work, vague goals and shifting expectations, political environments, hype-driven tech choices
+- Non-task factors: leadership style, department culture, company values, degree of autonomy (see 02-behavioral-profile.md keyword mapping)
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: concluding role at GreenRoad Technologies (2026); seeking next position - steady income preferred over high-risk equity bets
+- **Flexibility**: family-oriented ("showing up consistently at home and at work"); hybrid/remote-friendly preferred; commute up to ~40 min transit from Holon
+- **Professional development**: deepening the AI-assisted engineering niche; roles that combine hands-on depth with leadership breadth
 
 ### 6. Salary Benchmark (Optional)
 

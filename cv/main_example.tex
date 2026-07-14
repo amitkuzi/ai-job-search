@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Master CV - Amit Kuzi
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -24,18 +23,19 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Amit Kuzi - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.80]{geometry}
+\usepackage{needspace}
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Amit}{Kuzi}
+\address{26 Shenkar St, Holon, Israel 5826129}{}{}
+\phone[mobile]{+972~(0)54~4543836}
+\email{amitkuzi@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/amitkuzi}{LinkedIn}, \href{https://github.com/amitkuzi}{GitHub}, \href{https://www.amitkuzi.co.il/}{amitkuzi.co.il}}
 
 \begin{document}
 
@@ -46,7 +46,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Hands-on software architect and engineering leader with 20+ years of experience architecting, building, and shipping scalable backend systems. Serial legacy-modernization lead: migrated aging codebases at Amimon, Cynet (.NET Framework to .NET 6), and GreenRoad (CoreWCF to .NET 8/10 on Docker/Kubernetes). Pioneers AI-driven development with structured LLM workflows (Claude Code, MCP) to accelerate coding and large-scale migrations. Builds and mentors global engineering teams; values clean code, simple architecture, and honest communication.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +56,17 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Languages \& Platforms}: C\#, .NET / .NET 10, backend development, microservices, RESTful APIs, CoreWCF.
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{AI-Assisted Engineering}: AI-assisted development, LLM tooling (Claude Code, MCP), prompt engineering, agentic workflows.
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Architecture \& Scale}: software architecture, distributed systems, scalability, system integration, data pipelines (ETL), Docker, Kubernetes.
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Legacy Modernization}: repeated migration leadership: Amimon internal tooling, Cynet (.NET Framework to .NET 6), GreenRoad (CoreWCF to .NET 8/10, containerized).
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Ownership \& Delivery}: full-cycle development from requirements to production support, testing \& QA, debugging, client communication, technical mentoring.
+
+\item \textbf{Leadership}: divisional leadership, offshore and global team management (up to 30 people), international negotiations, project management.
 
 \end{itemize}
 
@@ -76,84 +78,103 @@
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- GreenRoad ---
+\item{\cventry{2024--2026}{Principal .NET Developer \& Software Architect}{GreenRoad Technologies}{Holon, Israel}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item \textbf{AI-Driven Modernization}: architected high-performance .NET 8/10 microservices; built AI-facilitated migration infrastructure accelerating conversion of legacy .NET Framework / CoreWCF systems to RESTful APIs on Docker and Kubernetes.
+    \item \textbf{Optimization \& Scalability}: enhanced On-Demand Intelligence (ODI) services by resolving low-level asynchronous resource leaks, ensuring zero downtime under extreme loads.
+    \item \textbf{Real-Time Systems}: led design and deployment of the Collision Detection engine, processing high-concurrency events with a zero-crash record.
+    \item \textbf{Technical Leadership}: translated complex business requirements into clean, scalable software designs with cross-functional teams.
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Amit Kuzi Consulting ---
+\item{\cventry{2020--2024}{Developer, Architect, Manager \& Consultant}{Amit Kuzi Consulting}{Tel Aviv District, Israel}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Delivered consulting and development services for a diverse range of clients across multiple domains and platforms.
+    \item Led key projects: a Social Network Analysis platform, a cashless payment ecosystem, and a Travel \& Tourism mobile app.
+    \item Built and mentored development teams spanning locations, cultures, and disciplines.
+    \item Employed structured AI/LLM strategies (Claude Code) to streamline development and accelerate legacy .NET migrations to modern containerized environments.
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Microsoft ---
+\item{\cventry{2021--2022}{Senior Software Engineer}{Microsoft}{Herzliya, Israel}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Developed and maintained Power Query Dataflow on the Power BI and Power Apps platforms.
+    \item Enhanced system performance by increasing concurrency and redundancy in a high-availability environment with numerous concurrent users.
 \end{itemize}}}
 
+\vspace{3pt}
+
+% --- Tzunami ---
+\needspace{5\baselineskip}
+\item{\cventry{2017--2020}{VP R\&D / Hands-On R\&D Manager \& Architect}{Tzunami}{Herzliya, Israel}{}{\vspace{1pt}
+\begin{itemize}
+    \item Led the company's data migration and recovery services (On-Prem ECM systems and cloud storage: GDrive, OneDrive, Box).
+    \item Managed a dev group of ~30: an offshore team of ~25 in Kathmandu, Nepal, plus a local hands-on team (CloudSfer), support, and IT operations.
+    \item Developed an industry game-changer On-Prem agent enabling cloud-based CloudSfer to migrate local data to cloud storage without firewall exceptions.
+    \item Planned and executed Tzunami's development roadmap.
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Amimon ---
+\needspace{5\baselineskip}
+\item{\cventry{2015--2017}{Tools Team Leader}{Amimon}{Ra'anana, Israel}{}{\vspace{1pt}
+\begin{itemize}
+    \item Managed the software team responsible for all internal tools; migrated and modernized legacy internal tooling.
+    \item Led development of automated multi-node test stations with a central management system.
+    \item Led an offshore team building multi-platform mobile clients and cloud-based backends alongside company hardware.
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     EARLIER ROLES
+% ============================================================
+
+\needspace{6\baselineskip}
+\section{Earlier Roles (1997--2015)}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{CodeValue} (2013--2015): Software Consultant / Architect; \textbf{Cellebrite} (2014): Senior Backend Developer.
+\item \textbf{Netformx} (2012--2013): Senior Developer: cloud hardware design platform, CISCO integration, MVVM/WPF course lecturer.
+\item \textbf{E4D Solutions / log-on} (2005--2012): Technology Consultant: medical, forex, homeland security (superDimension/Covidien, Aladdin, 3i-MIND).
+\item \textbf{OpenTV} (2008--2009), \textbf{CT Ware} (2007), \textbf{Checkpoint} (2006), \textbf{Initia} (2005), \textbf{Mate} (2004--2005), \textbf{Prompt2U} (2001--2002), \textbf{Gather Technologies} (1999--2000), \textbf{Camtek} (1997--1998).
 \end{itemize}
 
 % ============================================================
 %     EDUCATION
 % ============================================================
 
+\needspace{5\baselineskip}
 \section{Education}
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
+\item{\cventry{1993--1998}{B.Sc.\ Chemical Engineering}{Technion -- Israel Institute of Technology}{Haifa, Israel}{}{\vspace{1pt}
+Focus on Process Engineering and Computer Applications.
 }}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item \textbf{Israeli Nautical College, Acre}: full high school diploma in Electronics.
+\item \textbf{Military Service}: Sergeant, Artillery team commander (IDF).
 
 \end{itemize}
 
 % ============================================================
-%     LANGUAGES
+%     LANGUAGES & CERTIFICATIONS
 % ============================================================
 
-\section{Languages}
+\section{Languages \& Certifications}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
-\end{itemize}
-
-% ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item \textbf{Languages}: Hebrew (native), English (fluent).
+\item \textbf{Certifications}: C\# 7 First Look; C\#: Design Patterns; Learning ASP.NET Core MVC; Angular Essential Training.
 \end{itemize}
 
 % ============================================================

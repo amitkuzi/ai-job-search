@@ -105,12 +105,30 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For VP R&D / Engineering Manager roles:** *[Used for: cv amit kuzi 2026.VP]*
+> **Headline:** VP OF RESEARCH & DEVELOPMENT / ENGINEERING MANAGER
+> **Tagline:** Global Team Leadership | R&D Strategy & Execution | Scalable Architecture | Innovation & Growth
+> An innovative Engineering Manager with extensive experience delivering scalable solutions tailored to business needs. Proven track record of building, managing, and mentoring multidisciplinary engineering teams across global locations. Adept at bridging technology gaps and driving project success through strategic R&D planning and a people-focused approach.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Technical Team Leader roles:** *[Used for: cv amit kuzi 2026.TL]*
+> **Headline:** TECHNICAL TEAM LEADER & ARCHITECT
+> **Tagline:** Empowering Agile Teams | Clean Code Evangelist | Hands-on Technical Guidance | Project Delivery
+> A result-driven Team Leader and hands-on architect dedicated to delivering exceptional software solutions. Skilled in mentoring developers, fostering collaboration across diverse cultural teams, and solving complex technical challenges. Combines deep technical expertise with a people-first leadership style to ensure agile, on-time project delivery.
+
+**For Principal Engineer / Architect roles:** *[Used for: cv amit kuzi 2026.dev]*
+> **Headline:** PRINCIPAL SOFTWARE ENGINEER & ARCHITECT
+> **Tagline:** Passionate about Modern Architecture | Expert in .NET, Microservices, and Cloud Native | AI-Driven Development
+> An innovative Principal Developer and architect with a passion for designing and delivering robust, scalable solutions. Renowned as a technical problem solver adept at modernizing complex systems and optimizing performance. Committed to mentoring peers, driving continuous innovation, and translating critical business needs into exceptional code.
+
+**For Technology Consultant roles:** *[Used for: cv amit kuzi 2026.Consult]*
+> **Headline:** STRATEGIC TECHNOLOGY CONSULTANT / SOFTWARE ARCHITECT
+> **Tagline:** Business-Oriented Innovation | Global Markets Strategy | Client Success | Scalable Solution Design
+> A highly analytical Technology Consultant and architect specializing in delivering customized solutions to meet complex business demands. Expert in identifying technology gaps in competitive markets and aligning technical strategies with client goals. Fosters lasting client relationships through strategic problem-solving and a business-centric approach.
+
+**"Hunted" recruiter-outreach variant:** *[Used for: cv amit kuzi 2026.dev.Hunted]*
+Same profile statement as the Principal Engineer variant, but with a distinct visual design: blue banner header with the caricature portrait (`documents/funnyPortret.png`), plus a **"Selected Highlights"** block before Experience (6 bold-label bullets: 20+ Years of Engineering Excellence, Cross-Functional Leadership, Architectural & Technical Expertise, AI-Driven Development, Distributed Systems Innovation, Business-Centric Delivery). Use this style when responding to recruiter outreach rather than formal applications. Note: photo + non-standard layout trades ATS parseability for memorability - keep the moderncv variants for portal submissions.
+
+**Target role domains (user-confirmed, 2026-07):** the five documents/cv/ PDFs are design+domain samples for the roles Amit applies to - Principal Developer / Tech Lead, Software Architect, Engineering Manager, and Consulting positions.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.
