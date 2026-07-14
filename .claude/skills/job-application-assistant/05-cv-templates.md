@@ -18,6 +18,23 @@ cd cv && lualatex -interaction=nonstopmode main_<company>.tex
 
 Expected output: `Output written on main_<company>.pdf (2 pages, ...)`. Any page count other than 2 is a failure that must be fixed before presenting to the user.
 
+**No local TeX on this machine** - compile inside the CI container instead:
+
+```bash
+docker run --rm -v "d:/Development/ai-job-search:/work" -w /work/cv texlive/texlive:latest lualatex -interaction=nonstopmode main_<company>.tex
+```
+
+## Template: "modern" designed variant (with avatar) - `cv/main_modern.tex`
+
+Enterprise-styled alternative to moderncv, built 2026-07 at user request ("more pop, employer/enterprise context, add my avatar"):
+
+- **Design:** deep-navy header band with name, role headline, tagline, and a circular avatar (`cv/photo_amit.png`, copied from `documents/consultent protret.png` - the professional headshot, NOT the caricature); steel-blue accents; Lato body + Raleway headings loaded from `cover_letters/OpenFonts/` (no system fonts needed); footer `Amit Kuzi · page/2`.
+- **ATS-safe by construction:** single-column body, contact details as literal text (email, phone, and - unlike the moderncv master - LinkedIn/GitHub URLs too), verified clean extraction (0 cid markers). Icon glyph names in the extraction are harmless noise.
+- **When to use:** recruiter outreach, consulting proposals, enterprise-targeted applications where a designed CV stands out. Note: photos on CVs are not the norm in Israel - for conservative companies or strict ATS portals, prefer the moderncv variants; the header degrades to text-only if `photo_amit.png` is absent.
+- **Layout guards:** `\needspace` inside `\cventry`; add a manual `\needspace{9\baselineskip}` before an entry that splits across pages. En-dashes inside `\section{}` titles must be written `\textendash` (literal `--` is not ligatured there).
+- **Tailoring:** same content slots as the master (profile, competencies, experience bullets); tailor per role by swapping the headline/tagline in the header band and reweighting bullets.
+- **Git note:** `cv/main_modern.tex` matches the `cv/main_*.tex` gitignore rule, so it stays local (personal data) - as does the photo (`*.png`). Back them up outside git if needed.
+
 ## Document Structure
 
 ```latex

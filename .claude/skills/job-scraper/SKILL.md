@@ -104,6 +104,21 @@ For each new job, do a rapid fit check (NOT the full evaluation from `04-job-eva
 - **Medium match**: Role is adjacent to your experience
 - **Low match**: Role requires significant skills you lack
 
+For every high/medium match, also write a **one-line fit reason in Hebrew** (למה זה מתאים: which core skills/experience/behavioral traits from the profile the posting hits, or the main gap). This feeds the Hebrew presentation in Step 5.
+
+### Step 3.5: Company Snapshot (high/medium matches only)
+
+Enrich each high/medium match with company context (cap at ~6 companies per run; skip low matches):
+
+1. Check `seen_jobs.json` first - if another entry for the same company already carries `company_info`, reuse it.
+2. Otherwise run WebSearch: `"<company>" LinkedIn about employees` and `"<company>" Glassdoor rating reviews work culture`.
+3. Extract three things:
+   - **What the company does** - one line (product/domain/size if visible)
+   - **Location** - the office relevant to the posting, plus a commute check against the location filter in `search-queries.md`
+   - **Reputation as a workplace** - rating if found (e.g. "Glassdoor 4.1/5"), one line of recurring themes (culture, management, work-life balance), and the source
+4. **Do not WebFetch glassdoor.com pages directly** (login/bot wall) - rely on search snippets. Never invent ratings; if nothing reliable surfaces, write "לא נמצא מידע אמין" and move on.
+5. Store the result on the job entry in `seen_jobs.json` as `company_info: {"about": "...", "location": "...", "reputation": "...", "source": "...", "checked": "YYYY-MM-DD"}` so future runs reuse it.
+
 ### Step 4: Deduplicate & Store
 
 1. Add ALL fetched jobs (new and skipped) to `seen_jobs.json` with structure:
@@ -124,30 +139,32 @@ For each new job, do a rapid fit check (NOT the full evaluation from `04-job-eva
 
 `/rank` extends this schema additively: ranked entries also carry `rank_score` (0–100 overall score), `rank_verdict` (fit band, e.g. "strong fit"), and `rank_date` (ISO date of ranking). The `status` field is set to `"ranked"`. Do not drop these fields when re-writing entries.
 
+Step 3.5 extends it additively too: high/medium entries may carry `company_info` (about / location / reputation / source / checked). Preserve it when re-writing entries, and reuse it instead of re-searching a company seen in a previous run (refresh if `checked` is older than ~60 days).
+
 2. Only present jobs NOT already in the seen list or tracker.
 
 ### Step 5: Present Results
 
-Present new jobs in a table sorted by fit (high first):
+**Present the results in Hebrew** (user preference). Keep job titles, company names, and technical terms in their original language; everything else - headers, fit reasons, company snapshots - in Hebrew. Sort by fit (high first):
 
 ```
-## New Job Matches - YYYY-MM-DD
+## משרות חדשות - YYYY-MM-DD
 
-Found X new positions (Y high, Z medium, W low match).
+נמצאו X משרות חדשות (Y התאמה גבוהה, Z בינונית, W נמוכה).
 
-| # | Fit | Title | Company | Location | Deadline | URL |
-|---|-----|-------|---------|----------|----------|-----|
-| 1 | High | ... | ... | ... | ... | [Link](...) |
+| # | התאמה | תפקיד | חברה | מיקום | מועד אחרון | קישור |
+|---|-------|-------|------|-------|-----------|-------|
+| 1 | גבוהה | ... | ... | ... | ... | [קישור](...) |
 
-### High-Match Highlights
-For each high-match job, add 2-3 bullet points:
-- Why it matches your profile
-- Key requirements to check
-- Any red flags
+### פירוט - התאמה גבוהה ובינונית
+לכל משרה בהתאמה גבוהה/בינונית:
+- **ההתאמה שלך:** 1-2 שורות בעברית - אילו כישורים/ניסיון מהפרופיל המשרה פוגעת בהם, ומה הפער העיקרי אם יש (מ-Step 3)
+- **על החברה:** מה החברה עושה, מיקום המשרד ובדיקת נסיעה, והמוניטין שלה כמקום עבודה כולל דירוג ומקור (מ-Step 3.5)
+- **דרישות מפתח לבדוק / דגלים אדומים**
 ```
 
-After presenting, ask:
-> "Want me to evaluate any of these in detail? Just give me the number(s)."
+After presenting, ask (in Hebrew):
+> "רוצה שאעריך לעומק אחת מהמשרות? תן לי את המספר/ים."
 
 If the user picks a number, invoke the **job-application-assistant** skill workflow (fit evaluation first, then CV + cover letter if approved).
 
@@ -167,3 +184,5 @@ If the user decides to apply to any job, add a row to `job_search_tracker.csv`.
 4. **Only open positions.** Skip postings with expired deadlines or those marked as closed.
 5. **Be efficient with detail fetches.** Don't run `detail` or WebFetch on every search hit — pre-filter by title/snippet, then fetch only promising matches.
 6. **Parallel searches.** Run portal CLI searches in parallel; use WebSearch only for gaps the CLIs don't cover.
+7. **Company reputation is best-effort.** Ratings and culture signals come from public search snippets (LinkedIn/Glassdoor); always name the source, never invent a rating, and treat reviews as one noisy signal - not a verdict.
+8. **Hebrew presentation.** Final output to the user is in Hebrew (Step 5); job titles, company names, and technical terms stay in the original language.
