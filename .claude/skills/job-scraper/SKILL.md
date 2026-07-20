@@ -170,6 +170,18 @@ If the user picks a number, invoke the **job-application-assistant** skill workf
 
 If the run found many new jobs (roughly 8+), also suggest `/rank` - it batch-scores all new postings against the full fit framework and returns a ranked shortlist, which beats eyeballing a long table. (`/rank` sets the `ranked` and `expired` status values in `seen_jobs.json`; treat both as already-seen for dedup purposes.)
 
+### Step 5.5: Write the Dated Search-Output File (every run)
+
+After presenting, **always** write a persistent search-output file so the run is reproducible and the user has apply links plus document links in one place.
+
+- **Path:** `job_scraper/<DDMMYY>.md` (matches the user's convention, e.g. `140726.md` for 2026-07-14). The `job_scraper/` directory is gitignored (personal data), so these files stay local. If today's file already exists, update it rather than clobbering prior detail.
+- **Contents (Hebrew, per Step 5 preference; keep titles/company/technical terms in the original language):**
+  - Search date, sources searched, and summary counts.
+  - A table of every high/medium match: title, company, location, posted date, and a markdown **apply link** (the posting URL).
+  - For any job in this run that `/apply` produced documents for, add links to the created **CV and cover letter**. Paths are relative from `job_scraper/`: `../cv/main_<company>.pdf` and `../cover_letters/cover_<company>_<role>.pdf`, plus the `.tex` sources. Only link documents that actually exist on disk; leave the columns blank until `/apply` has generated them.
+  - Company snapshots from Step 3.5 (about / location / reputation + source).
+  - Skipped/low matches summarized, with a pointer to `seen_jobs.json`.
+
 ### Step 6: Update Tracker (Optional)
 
 If the user decides to apply to any job, add a row to `job_search_tracker.csv`.

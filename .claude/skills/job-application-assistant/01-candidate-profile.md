@@ -94,6 +94,11 @@
 ### Architecture & Scale
 - Software Architecture, Scalability, Distributed Systems, System Integration, Data Pipelines (ETL)
 - Docker, Kubernetes, RESTful APIs, CoreWCF, high-availability / high-concurrency systems
+- **Data stores & messaging (GreenRoad production stack, candidate-confirmed 2026):** MSSQL, MongoDB, RabbitMQ
+
+### Language scope (candidate-confirmed)
+- Primary: C# / .NET. Early-career C/C++ (network drivers, systems work, late 1990s-early 2000s).
+- **No production Java or Python** - do not claim these on any CV or cover letter. When a posting lists Java/Python, frame .NET as the equivalent enterprise backend and be explicit about the gap.
 
 ### Legacy Migration Track Record
 - Amimon: legacy internal tooling modernization
