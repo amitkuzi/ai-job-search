@@ -47,9 +47,11 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
+*(Updated 2026-07-20: relocation is no longer a blanket deal-breaker.)*
+- Within commute range (Holon/Tel Aviv metro): PASS
+- Remote, any employer location: PASS
+- Relocation to US, UK, Canada, or Western Europe: PASS (flag visa/timeline specifics for user discussion)
+- Relocation outside those regions: FLAG (discuss with user - not pre-approved, not an automatic exclusion either)
 - Frequent international travel: FLAG (discuss with user)
 
 ### 5. Career Alignment & Motivation (0-100)
@@ -63,20 +65,22 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals (target role types, in priority order):**
-- Principal Developer / Tech Lead - hands-on technical leadership of a team or domain
-- Software Architect - system design, modernization programs, distributed systems
-- Engineering Manager (hands-on) - people + technology leadership, not pure people management
+- Principal Developer / Tech Lead - hands-on technical leadership of a team or domain (hands-on coding required at this level)
+- Software Architect - system design, modernization programs, distributed systems (hands-on coding NOT required - design/strategy depth is what matters)
+- Engineering Manager - people + technology leadership (hands-on coding NOT required at this level - pure people-management is fine)
 - Technology Consultant / consulting positions - leveraging the 2020-2024 independent practice and CodeValue background
 - Cross-cutting differentiator: AI-driven development and legacy-modernization leadership (Claude Code, MCP, agentic workflows)
 
+*(Updated 2026-07-20: hands-on-coding is a requirement specifically for Tech Lead/IC-track roles and any .NET-labeled role - not for Architect or Manager tracks.)*
+
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
 - Tasks that energize: legacy modernization at scale, architecture design, mentoring engineers, adopting AI tooling into engineering workflows, hunting hard production bugs (async leaks, concurrency), building real-time/high-load systems
-- Tasks that drain: pure maintenance with no development, pure people management with zero hands-on work, vague goals and shifting expectations, political environments, hype-driven tech choices
+- Tasks that drain: pure maintenance with no development, a Tech Lead/IC or .NET role with zero hands-on coding, vague goals and shifting expectations, political environments, hype-driven tech choices
 - Non-task factors: leadership style, department culture, company values, degree of autonomy (see 02-behavioral-profile.md keyword mapping)
 
 **Life situation alignment:** Consider personal constraints:
 - **Security**: concluding role at GreenRoad Technologies (2026); seeking next position - steady income preferred over high-risk equity bets
-- **Flexibility**: family-oriented ("showing up consistently at home and at work"); hybrid/remote-friendly preferred; commute up to ~40 min transit from Holon
+- **Flexibility**: family-oriented ("showing up consistently at home and at work"); hybrid/remote-friendly preferred; commute up to ~40 min transit from Holon for local roles. Also open (2026-07-20) to fully remote roles regardless of employer location, and to relocation within the US, UK, Canada, or Western Europe - discuss visa/timeline specifics with the user before drafting anything for a relocation posting
 - **Professional development**: deepening the AI-assisted engineering niche; roles that combine hands-on depth with leadership breadth
 
 ### 6. Salary Benchmark (Optional)

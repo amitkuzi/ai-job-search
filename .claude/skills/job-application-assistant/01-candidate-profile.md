@@ -10,7 +10,7 @@
 - **GitHub:** https://github.com/amitkuzi
 - **Languages:** Hebrew (native), English (fluent)
 - **Status:** Concluding role at GreenRoad Technologies (2026); seeking next position
-- **Constraints:** 
+- **Constraints:** Local roles: up to ~40 min transit commute from Holon. Also open (2026-07-20) to fully remote roles (any employer location) and relocation within the US, UK, Canada, or Western Europe - flag visa/timeline specifics for user discussion before drafting anything for a relocation posting. Relocation outside those regions: discuss with user first, not pre-approved.
 
 **Date presentation rule (user preference):** use year-level date ranges on CVs (e.g. 2015-2017, not Dec 2015 - Aug 2017) to minimize visible gaps between roles.
 

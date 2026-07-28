@@ -16,8 +16,9 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash(bun --version), Bash(bun run 
 
 This skill searches job portals using the **installed portal-search CLIs** in
 `.agents/skills/` (plus WebSearch as a fallback), using queries from your profile.
-It deduplicates against previously seen jobs and the application tracker, and
-presents new matches with a quick fit assessment.
+It deduplicates against previously seen jobs and the application tracker, scores
+each new match with a numeric fitness assessment, and presents results sorted by
+that score.
 
 ## Invocation
 
@@ -96,15 +97,23 @@ For every candidate:
 - Skip if the URL or company+title combo already exists in `seen_jobs.json`
 - Skip if the company+role already appears in `job_search_tracker.csv`
 
-### Step 3: Quick Fit Assessment
+### Step 3: Fitness Assessment
 
-For each new job, do a rapid fit check (NOT the full evaluation from `04-job-evaluation.md` - just a quick signal):
+For each new job, compute a numeric **fitness score (0-100)** using the same weighted dimensions as `.claude/skills/job-application-assistant/04-job-evaluation.md` - this is **triage-depth** (posting text + profile only, no company research, no salary lookup), the same depth `/rank` operates at. Read that file once per run if it isn't already in context.
 
-- **High match**: Role directly involves your core skills
-- **Medium match**: Role is adjacent to your experience
-- **Low match**: Role requires significant skills you lack
+1. Score each dimension from whatever posting content Step 2 fetched (full detail if fetched, title/snippet if that's all there was), against the framework's Strong/Moderate/Weak match areas and career-goal priorities:
+   - Technical Skills (0-100)
+   - Experience Match (0-100)
+   - Behavioral/Culture Fit (0-100) - light-touch; deep culture research belongs to Step 3.5, not this step
+   - Career Alignment (0-100)
+   - Location: PASS/FAIL/FLAG (unweighted - a FAIL excludes the job per Important Rule 3 regardless of score)
+2. Compute the overall score with the framework's weights (Technical 30%, Experience 25%, Behavioral 15%, Career 30%) and store as `rank_score`.
+3. Map to the framework's verdict bands (Strong Fit 75+, Good Fit 60-74, Moderate Fit 45-59, Weak Fit 30-44, Poor Fit <30) and store as `rank_verdict`.
+4. Derive the coarse `fit` bucket that gates Step 3.5 and the rest of this skill directly from the score: `high` = Strong/Good Fit (60+), `medium` = Moderate Fit (45-59), `low` = Weak/Poor Fit (<45).
 
 For every high/medium match, also write a **one-line fit reason in Hebrew** (למה זה מתאים: which core skills/experience/behavioral traits from the profile the posting hits, or the main gap). This feeds the Hebrew presentation in Step 5.
+
+**Honesty rule (same as `/rank` and `/apply`):** score only from content actually fetched - never invent posting details, never inflate a score because a company name looks prestigious. If Step 2 could only get a title/snippet (no real detail), leave `rank_score`/`rank_verdict` unset, keep the bucket at `low`, and note "לא ניתן לדרג - תיאור לא נשלף" in the fit reason instead of guessing a number.
 
 ### Step 3.5: Company Snapshot (high/medium matches only)
 
@@ -131,13 +140,16 @@ Enrich each high/medium match with company context (cap at ~6 companies per run;
       "url": "...",
       "first_seen": "YYYY-MM-DD",
       "fit": "high/medium/low",
-      "status": "new/skipped/evaluated/ranked/expired"
+      "status": "new/skipped/evaluated/ranked/expired",
+      "rank_score": 0,
+      "rank_verdict": "Strong Fit/Good Fit/Moderate Fit/Weak Fit/Poor Fit",
+      "rank_date": "YYYY-MM-DD"
     }
   }
 }
 ```
 
-`/rank` extends this schema additively: ranked entries also carry `rank_score` (0–100 overall score), `rank_verdict` (fit band, e.g. "strong fit"), and `rank_date` (ISO date of ranking). The `status` field is set to `"ranked"`. Do not drop these fields when re-writing entries.
+Step 3's Fitness Assessment writes `rank_score`, `rank_verdict`, and `rank_date` directly and sets `status` to `"ranked"` - it scores at the same depth `/rank` does and writes the same fields, so a job scored during this run does not need a separate `/rank` pass. Leave these three fields unset (and `status: "new"`) only for the Step 3 honesty-rule fallback, where no real posting content was fetched to score from. `/rank` remains useful afterward for: re-scoring everything with `--all` once the profile changes, and picking up older entries that predate this step and still only carry a `fit` bucket with no `rank_score`.
 
 Step 3.5 extends it additively too: high/medium entries may carry `company_info` (about / location / reputation / source / checked). Preserve it when re-writing entries, and reuse it instead of re-searching a company seen in a previous run (refresh if `checked` is older than ~60 days).
 
@@ -145,16 +157,16 @@ Step 3.5 extends it additively too: high/medium entries may carry `company_info`
 
 ### Step 5: Present Results
 
-**Present the results in Hebrew** (user preference). Keep job titles, company names, and technical terms in their original language; everything else - headers, fit reasons, company snapshots - in Hebrew. Sort by fit (high first):
+**Present the results in Hebrew** (user preference). Keep job titles, company names, and technical terms in their original language; everything else - headers, fit reasons, company snapshots - in Hebrew. **Sort by `rank_score` descending** (highest fitness score first; unscored fallback entries last):
 
 ```
 ## משרות חדשות - YYYY-MM-DD
 
 נמצאו X משרות חדשות (Y התאמה גבוהה, Z בינונית, W נמוכה).
 
-| # | התאמה | תפקיד | חברה | מיקום | מועד אחרון | קישור |
-|---|-------|-------|------|-------|-----------|-------|
-| 1 | גבוהה | ... | ... | ... | ... | [קישור](...) |
+| # | ציון | דירוג | תפקיד | חברה | מיקום | מועד אחרון | קישור |
+|---|------|-------|-------|------|-------|-----------|-------|
+| 1 | 84 | Strong Fit | ... | ... | ... | ... | [קישור](...) |
 
 ### פירוט - התאמה גבוהה ובינונית
 לכל משרה בהתאמה גבוהה/בינונית:
@@ -166,9 +178,9 @@ Step 3.5 extends it additively too: high/medium entries may carry `company_info`
 After presenting, ask (in Hebrew):
 > "רוצה שאעריך לעומק אחת מהמשרות? תן לי את המספר/ים."
 
-If the user picks a number, invoke the **job-application-assistant** skill workflow (fit evaluation first, then CV + cover letter if approved).
+If the user picks a number, invoke the **job-application-assistant** skill workflow (fit evaluation first, then CV + cover letter if approved) - it re-evaluates from scratch with company research; this step's fitness score is a triage signal, not a substitute.
 
-If the run found many new jobs (roughly 8+), also suggest `/rank` - it batch-scores all new postings against the full fit framework and returns a ranked shortlist, which beats eyeballing a long table. (`/rank` sets the `ranked` and `expired` status values in `seen_jobs.json`; treat both as already-seen for dedup purposes.)
+`/rank` is still available for a full re-score of everything (`--all`, e.g. after a profile update) or to pick up older entries scraped before this step existed that still only carry a `fit` bucket with no `rank_score`. (`/rank` sets the `ranked` and `expired` status values in `seen_jobs.json`; treat both as already-seen for dedup purposes.)
 
 ### Step 5.5: Write the Dated Search-Output File (every run)
 
@@ -198,3 +210,4 @@ If the user decides to apply to any job, add a row to `job_search_tracker.csv`.
 6. **Parallel searches.** Run portal CLI searches in parallel; use WebSearch only for gaps the CLIs don't cover.
 7. **Company reputation is best-effort.** Ratings and culture signals come from public search snippets (LinkedIn/Glassdoor); always name the source, never invent a rating, and treat reviews as one noisy signal - not a verdict.
 8. **Hebrew presentation.** Final output to the user is in Hebrew (Step 5); job titles, company names, and technical terms stay in the original language.
+9. **Fitness score is triage-depth, not final.** Step 3's `rank_score` comes from posting text and your profile only - it stands in for `/rank`'s scoring so you don't have to run both, but it is never a substitute for `/apply`'s full evaluation (fresh fetch, company research, salary benchmark) before anything gets drafted.

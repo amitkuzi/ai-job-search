@@ -14,7 +14,8 @@ Full structured profile: `.claude/skills/job-application-assistant/01-candidate-
 
 ### Identity
 - **Name:** Amit Kuzi
-- **Location:** Holon, Israel (Tel Aviv metro; up to ~40 min transit commute - Ra'anana/Herzliya/Kfar Saba down to Rehovot OK, Netanya too far)
+- **Location:** Holon, Israel (Tel Aviv metro; up to ~40 min transit commute - Ra'anana/Herzliya/Kfar Saba down to Rehovot OK, Netanya too far) - this remains the range for local on-site/hybrid roles
+- **Location scope (updated 2026-07-20):** also open to remote roles (any employer location) and relocation roles in the US, UK, Canada, and Western Europe
 - **Languages:** Hebrew (native), English (fluent)
 - **Status:** Concluding role at GreenRoad Technologies (2026); seeking next position
 - **Contact:** amitkuzi@gmail.com | +972 (0)54 4543836 | linkedin.com/in/amitkuzi | github.com/amitkuzi | amitkuzi.co.il
@@ -57,22 +58,23 @@ Full structured profile: `.claude/skills/job-application-assistant/01-candidate-
 - **Strengths:** direct honest communication, legacy-modernization leadership, global team building
 - **Growth areas:** low tolerance for prolonged ambiguity and repeated mistakes (frame as structure-creator)
 - **Thrives in:** trust, clarity, psychological safety; clear goals; learning-not-blame culture
+- **Hands-on scope (2026-07-20 clarification):** hands-on coding matters for Tech Lead/IC-track roles and any .NET-labeled role. Architect and Manager-track roles do NOT need to be hands-on - pure design/strategy (Architect) or pure people-management (Manager) is fine at that seniority.
 
 ### What Excites You
 - Legacy modernization at scale and AI-driven development (Claude Code workflows)
 - Building/mentoring confident teams; stable systems under real load; meaningful problems with real impact
 
 ### Target Sectors
-- **Target roles:** Principal Developer / Tech Lead, Software Architect, Engineering Manager (hands-on), Technology Consultant
+- **Target roles:** Principal Developer / Tech Lead, Software Architect, Engineering Manager, Technology Consultant
 - **Big tech / large enterprise (Israel R&D centers):** Google, Microsoft, NVIDIA, Amazon/AWS, Apple, Meta, Intel, and similar
 - **Israeli product companies & scale-ups:** telematics, SaaS, cybersecurity, data platforms
 - **Consulting firms:** CodeValue-style architecture/consulting practices
 
 ### Deal-breakers
-- Relocation (Israel-based only; hybrid/remote-friendly preferred)
-- Pure people-management with zero hands-on technical component
 - Pure maintenance roles with no development
 - "Move fast and break things" culture as a virtue; vague goals / constantly shifting expectations
+
+(Removed 2026-07-20, no longer deal-breakers: relocation - see Location scope above; pure people-management/pure architecture with no hands-on coding - see Hands-on scope above, still applies to Tech Lead/IC and .NET roles.)
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

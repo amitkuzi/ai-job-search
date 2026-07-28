@@ -6,10 +6,10 @@
 
 Two channels (user decision 2026-07-14 - amends the earlier "LinkedIn only" decision):
 
-1. **linkedin.com/jobs** - via the `linkedin-search` CLI skill (location filter: Israel / Tel Aviv metro)
+1. **linkedin.com/jobs** - via the `linkedin-search` CLI skill (location filter: Israel / Tel Aviv metro, plus Remote and relocation regions - see Location Scope below)
 2. **Big-tech & large-enterprise career pages** - direct checks via WebFetch/WebSearch (see section below). No CLI skill exists for these; use `site:` queries or fetch the filtered career-page URLs.
 
-Do NOT add other generic job boards; this setup is intentionally limited to LinkedIn + direct company career pages.
+Do NOT add other generic job boards without the user's approval; this setup is intentionally limited to LinkedIn + direct company career pages. See "Additional Sources" below for options if broader coverage is wanted - onboard any of them properly via `/add-portal` rather than ad-hoc WebSearch scraping.
 
 ## Query Categories
 
@@ -38,9 +38,9 @@ linkedin-search: -q "Solutions Architect backend" -l "Tel Aviv, Israel"
 linkedin-search: -q "System Architect distributed systems" -l "Tel Aviv, Israel"
 ```
 
-### Priority 3: Engineering Manager (hands-on)
+### Priority 3: Engineering Manager
 
-People + technology leadership; must keep a hands-on component.
+People + technology leadership. No hands-on coding requirement at this level (updated 2026-07-20) - pure people-management is fine.
 
 ```
 linkedin-search: -q "Engineering Manager hands-on" -l "Tel Aviv, Israel"
@@ -61,6 +61,22 @@ linkedin-search: -q "Senior Backend Engineer C# .NET" -l "Tel Aviv, Israel"
 linkedin-search: -q "legacy modernization .NET migration" -l "Israel"
 linkedin-search: -q "AI-assisted development engineer" -l "Israel"
 ```
+
+### Priority 5: Remote & Relocation (added 2026-07-20)
+
+Same role focus as Priorities 1-2 (Tech Lead/IC and Software Architect are the strongest matches), but widened beyond Israel. Run this category when the user asks for a broad/international sweep, not by default on every `/scrape` (keeps routine runs fast and local-first).
+
+```
+linkedin-search: -q "Software Architect .NET" -l "Remote"
+linkedin-search: -q "Principal Software Engineer .NET" -l "Remote"
+linkedin-search: -q "Software Architect microservices" -l "United States"
+linkedin-search: -q "Software Architect microservices" -l "United Kingdom"
+linkedin-search: -q "Software Architect microservices" -l "Canada"
+linkedin-search: -q "Software Architect .NET" -l "Germany"
+linkedin-search: -q "Software Architect .NET" -l "Netherlands"
+```
+
+Relocation region scope (user decision 2026-07-20): **US, UK, Canada, Western Europe only.** Do not surface relocation postings outside this set without checking with the user first (see Location Scope below - a FLAG, not an auto-include). Remote postings have no such restriction - any employer location is fine since there's no physical move.
 
 ### Distinctive skill terms (mix into any query)
 
@@ -100,18 +116,36 @@ Check these directly during /scrape - many big-tech postings appear here before 
 - Skill terms that map well at big tech: C#/.NET, distributed systems, microservices, high-scale backend
 - To promote a company page into a proper CLI skill later, run `/add-portal` with its careers URL.
 
-## Location Filter
+## Location Filter (updated 2026-07-20)
 
-When evaluating results, verify the job location is within commute range from Holon:
-- **Ideal:** Holon, Tel Aviv and immediate surroundings
-- **Acceptable:** Ra'anana / Herzliya / Kfar Saba in the north down to Rehovot in the south
-- **Borderline:** anything up to ~40 min by transit - flag for user judgment
-- **Too far:** Netanya and beyond, Haifa, Yokneam, Jerusalem, Beer Sheva (unless remote/hybrid-mostly)
-- **Remote/hybrid roles:** PASS regardless of office location if office days are occasional
+When evaluating results, classify the job location as one of:
+- **Ideal (local):** Holon, Tel Aviv and immediate surroundings
+- **Acceptable (local):** Ra'anana / Herzliya / Kfar Saba in the north down to Rehovot in the south
+- **Borderline (local):** anything up to ~40 min by transit from Holon - flag for user judgment
+- **Too far (local, non-remote):** Netanya and beyond, Haifa, Yokneam, Jerusalem, Beer Sheva - exclude unless the role is remote/hybrid-mostly
+- **Remote:** PASS regardless of employer location - no physical move required
+- **Relocation, US/UK/Canada/Western Europe:** PASS - approved region (user decision 2026-07-20)
+- **Relocation, elsewhere:** FLAG for user judgment, do not auto-exclude but do not treat as pre-approved either
 
 ## Date Filter
 
 Only include jobs posted within the last 14 days, or with an application deadline that has not yet passed. If a posting date cannot be determined, include it but flag as "date unknown".
+
+## Additional Sources (candidates, not yet wired in - added 2026-07-20)
+
+Current coverage is LinkedIn (CLI) + direct big-tech career pages (WebSearch/WebFetch). Now that remote and US/UK/Canada/Western-Europe relocation are in scope, these are worth adding via `/add-portal` (which builds a proper CLI skill, same pattern as `linkedin-search`) rather than ad-hoc WebSearch:
+
+| Source | Best for | Notes |
+|--------|----------|-------|
+| Indeed | Broad coverage, has both Israel and international/remote filters | Largest volume; more noise than LinkedIn, worth a targeted `/add-portal` |
+| Wellfound (AngelList Talent) | Remote & startup/scale-up roles, often with salary transparency | Skews startup, matches your Israeli scale-up target sector too |
+| We Work Remotely / RemoteOK | Remote-only roles | Useful now that remote is in scope; lower volume of Architect/Principal-level roles than LinkedIn |
+| Otta | Curated tech roles, US/UK/Europe scale-ups | Good fit for the new relocation regions specifically |
+| Built In | US-specific, city-based tech hubs (NYC, SF, Austin, etc.) | Only relevant if the US relocation search narrows to specific cities |
+| EURES | Official EU job-mobility portal | Useful if Western-Europe relocation search needs visa/mobility-scheme-aware listings |
+| Xing | DACH region (Germany/Austria/Switzerland) | Complements LinkedIn if Germany/Austria specifically become a focus |
+
+Recommendation: don't add all of these at once. Pick 1-2 that match where relocation search actually gets used (e.g. Indeed for broad international + Otta or Wellfound for curated US/EU) and onboard via `/add-portal`; expand later if the ROI is there. Keep the existing rule of not silently scraping a new site without the user's sign-off.
 
 ## Adapting Queries
 

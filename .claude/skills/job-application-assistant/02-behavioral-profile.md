@@ -70,7 +70,7 @@ When a job posting mentions these keywords, it's a **strong behavioral fit**:
 
 When a job posting mentions these, flag as **potential friction** (not deal-breaker):
 - "move fast and break things", "fast-paced startup chaos" framed as a virtue, hype-led tech choices
-- Roles that are pure people-management with no hands-on technical component
+- A Tech Lead/IC-track or .NET-labeled role with **no** hands-on coding component *[updated 2026-07-20: this friction does NOT apply to Architect or Manager-track roles - pure design/strategy or pure people-management is fine at that seniority]*
 - Signals of vague goals / constantly shifting priorities, or a "ship now, fix later" culture *[from HTWBWM frustrations]*
 
 ## Using This in Applications
