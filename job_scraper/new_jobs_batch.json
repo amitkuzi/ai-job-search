@@ -1,0 +1,167 @@
+{
+  "new_jobs": [
+    {
+      "id": "4460883379",
+      "title": "Senior C# Backend Engineer",
+      "company": "Yael Korentec Technologies",
+      "location": "Yehud Monosson, Center District, Israel",
+      "date": "2026-08-30",
+      "url": "https://il.linkedin.com/jobs/view/senior-c%23-backend-engineer-at-yael-korentec-technologies-4460883379",
+      "search": "Principal Software Engineer .NET"
+    },
+    {
+      "id": "4452421655",
+      "title": "Senior Back End Developer - C#/.NET",
+      "company": "ARAN Software",
+      "location": "Center District, Israel",
+      "date": "2026-08-25",
+      "url": "https://il.linkedin.com/jobs/view/senior-back-end-developer-c%23-net-at-aran-software-4452421655",
+      "search": "Principal Software Engineer .NET"
+    },
+    {
+      "id": "4455078595",
+      "title": ".NET Developer",
+      "company": "Gotfriends",
+      "location": "Center District, Israel",
+      "date": "2026-08-23",
+      "url": "https://il.linkedin.com/jobs/view/net-developer-at-gotfriends-4455078595",
+      "search": "Principal Software Engineer .NET"
+    },
+    {
+      "id": "4456725005",
+      "title": "Senior Software Engineer",
+      "company": "Commit",
+      "location": "Petah Tikva, Center District, Israel",
+      "date": "2026-08-20",
+      "url": "https://il.linkedin.com/jobs/view/senior-software-engineer-at-commit-4456725005",
+      "search": "Principal Software Engineer .NET"
+    },
+    {
+      "id": "4456907802",
+      "title": "Senior Developer (.NET Core + React)",
+      "company": "Moveo Group",
+      "location": "Tel Aviv District, Israel",
+      "date": "2026-08-25",
+      "url": "https://il.linkedin.com/jobs/view/senior-developer-net-core-%2B-react-at-moveo-group-4456907802",
+      "search": "Principal Software Engineer .NET"
+    },
+    {
+      "id": "4455799737",
+      "title": "Principal Software Engineer, Elasticache",
+      "company": "Amazon Web Services (AWS)",
+      "location": "Tel Aviv-Yafo, Tel Aviv District, Israel",
+      "date": "2026-08-19",
+      "url": "https://il.linkedin.com/jobs/view/principal-software-engineer-elasticache-at-amazon-web-services-aws-4455799737",
+      "search": "Principal Developer"
+    },
+    {
+      "id": "4456810089",
+      "title": "Software Principal Engineer",
+      "company": "Dell Technologies",
+      "location": "Herzliya, Tel Aviv District, Israel",
+      "date": "2026-08-23",
+      "url": "https://il.linkedin.com/jobs/view/software-principal-engineer-at-dell-technologies-4456810089",
+      "search": "Principal Developer"
+    },
+    {
+      "id": "4458796164",
+      "title": "Full stack Tech lead",
+      "company": "ONE Technologies",
+      "location": "Rishon LeZion, Center District, Israel",
+      "date": "2026-08-25",
+      "url": "https://il.linkedin.com/jobs/view/full-stack-tech-lead-at-one-technologies-4458796164",
+      "search": "Tech Lead .NET"
+    },
+    {
+      "id": "4459188635",
+      "title": "Software Development Manager | C#/.NET",
+      "company": "Extreme",
+      "location": "Petah Tikva, Center District, Israel",
+      "date": "2026-08-26",
+      "url": "https://il.linkedin.com/jobs/view/software-development-manager-c%23-net-at-extreme-4459188635",
+      "search": "Tech Lead .NET"
+    },
+    {
+      "id": "4456916666",
+      "title": "Senior Full Stack Developer",
+      "company": "Priority Software",
+      "location": "Nesher, Haifa District, Israel",
+      "date": "2026-08-29",
+      "url": "https://il.linkedin.com/jobs/view/senior-full-stack-developer-at-priority-software-4456916666",
+      "search": "Tech Lead .NET"
+    },
+    {
+      "id": "4457255108",
+      "title": "Infrastructure developer",
+      "company": "Software AG Israel",
+      "location": "Tel Aviv District, Israel",
+      "date": "2026-08-26",
+      "url": "https://il.linkedin.com/jobs/view/infrastructure-developer-at-software-ag-israel-4457255108",
+      "search": "Tech Lead .NET"
+    },
+    {
+      "id": "4455825921",
+      "title": "Software Architect",
+      "company": "Gotfriends",
+      "location": "Tel Aviv District, Israel",
+      "date": "2026-08-24",
+      "url": "https://il.linkedin.com/jobs/view/software-architect-at-gotfriends-4455825921",
+      "search": "Software Architect .NET"
+    },
+    {
+      "id": "4447413222",
+      "title": "Senior Software and System Architect",
+      "company": "NVIDIA",
+      "location": "Yokneam Ilit, North District, Israel",
+      "date": "2026-08-22",
+      "url": "https://il.linkedin.com/jobs/view/senior-software-and-system-architect-at-nvidia-4447413222",
+      "search": "Software Architect microservices"
+    },
+    {
+      "id": "4447404432",
+      "title": "Senior Software and System Architect",
+      "company": "NVIDIA",
+      "location": "Tel Aviv District, Israel",
+      "date": "2026-08-22",
+      "url": "https://il.linkedin.com/jobs/view/senior-software-and-system-architect-at-nvidia-4447404432",
+      "search": "Software Architect microservices"
+    },
+    {
+      "id": "4458990450",
+      "title": "Senior Engineering Manager",
+      "company": "NielsenIQ",
+      "location": "Yoqneam Illit, North District, Israel",
+      "date": "2026-08-28",
+      "url": "https://il.linkedin.com/jobs/view/senior-engineering-manager-at-nielseniq-4458990450",
+      "search": "Engineering Manager hands-on"
+    },
+    {
+      "id": "4454455251",
+      "title": "Manager, Infrastructure Engineering and DevOps",
+      "company": "NVIDIA",
+      "location": "Yokneam Ilit, North District, Israel",
+      "date": "2026-08-18",
+      "url": "https://il.linkedin.com/jobs/view/manager-infrastructure-engineering-and-devops-at-nvidia-4454455251",
+      "search": "Engineering Manager hands-on"
+    },
+    {
+      "id": "4457908534",
+      "title": "Engineering Manager",
+      "company": "AT&T Israel R&D Center",
+      "location": "Tel Aviv District, Israel",
+      "date": "2026-08-26",
+      "url": "https://il.linkedin.com/jobs/view/engineering-manager-at-at-t-israel-r-d-center-4457908534",
+      "search": "Engineering Manager hands-on"
+    },
+    {
+      "id": "4455721485",
+      "title": "Engineering Team Leader",
+      "company": "HiBob",
+      "location": "Tel Aviv-Yafo, Tel Aviv District, Israel",
+      "date": "2026-08-18",
+      "url": "https://il.linkedin.com/jobs/view/engineering-team-leader-at-hibob-4455721485",
+      "search": "Engineering Manager hands-on"
+    }
+  ],
+  "total": 18
+}
