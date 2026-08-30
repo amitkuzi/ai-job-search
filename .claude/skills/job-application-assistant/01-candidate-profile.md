@@ -74,7 +74,7 @@
 - **Mate** (2004-2005): Senior Software Engineer - face recognition application
 - **Prompt2U** (2001-2002): Software Engineer
 - **Gather Technologies** (1999-2000): Programmer
-- **Camtek** (1997-1998): Intern/Application Engineer
+- **Camtek** (1997-1998): Intern/Application Engineer - supported automated optical/visual inspection systems for semiconductor manufacturing (candidate-confirmed 2026-08-06)
 - **Various startups** (1999-2003): IE toolbar (COM/MFC), TCP session-migration network driver, agent-based network management for internet cafes
 
 ## Independent Projects
